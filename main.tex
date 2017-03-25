@@ -1,0 +1,32 @@
+% this is the main document
+
+% apply preamble e.g. \usepackage{...}
+\input{preamble}
+
+% set default commands
+\input{commands-default}
+
+% set user commands and default overrides
+\input{commands-user}
+
+%%%%%%%%%%%%%%%%
+\begin{document}
+
+\pagestyle{headings}
+\pagenumbering{arabic}
+
+% set title
+\include{title}
+
+% configure contents
+\tableofcontents
+%\listoffigures                                                                                                                           %\listoftables   
+
+% import chapters
+\include{chapter1}
+
+% set references
+\include{biblioraphy}
+
+\end{document}
+%%%%%%%%%%%%%%%%

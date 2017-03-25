@@ -1,0 +1,56 @@
+% document class
+\documentclass[12pt,a4paper,openright]{report}
+
+% preample to include all usepackages
+\usepackage{graphics}
+\usepackage{graphicx}
+
+\usepackage{ifthen} 
+\newboolean{uprightparticles}
+\setboolean{uprightparticles}{false} %Set true for upright particle symbols
+\usepackage{xspace} 
+\usepackage{textgreek}
+\usepackage{amsmath}
+\usepackage{hyperref}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{verbatim}
+
+% make sure to number subsubsections in report class
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
+
+% no indent for paragraphs
+\setlength{\parindent}{0pt}
+
+% formatting including special defined columns etc
+\sloppy % don't let TeX get too het up about line breaks
+
+\newcolumntype{e}{@{ $\pm$ }l}         % Columna que conté \pm.
+\newcolumntype{R}{>{$}r<{$}}           % Columna matemàtica a la dreta.
+\newcolumntype{E}{@{ $\pm$ }>{$}l<{$}} % Columna d'errors a l'esquerra.
+\newcolumntype{L}{>{$}l<{$}}           % Columna matemàtica a l'esquerra.
+\newcolumntype{C}{>{$}c<{$}}           % Columna matemàtica centrada.
+
+% Bound single side version
+%\topmargin=-1cm
+%\oddsidemargin=0.4cm
+%\evensidemargin=0.4cm
+%\textheight=24.5cm
+%\textwidth=16.5cm
+
+% Bound double side version
+% \topmargin=-1cm
+% \oddsidemargin=0.4cm
+% \evensidemargin=-1.0cm
+% \textheight=24.5cm
+% \textwidth=16.5cm
+
+% Unbound double side version
+\topmargin=-1cm
+\oddsidemargin=-0.2cm
+\evensidemargin=-0.4cm
+\textheight=24.5cm
+\textwidth=16.5cm
+
